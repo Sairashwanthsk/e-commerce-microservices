@@ -21,6 +21,11 @@ spring:
           uri: http://orderservice:8083
           predicates:
             - Path=/ecommerce/api/orders/**
+
+        - id: cartservice
+          uri: http://cartservice:8084
+          predicates:
+            - Path=/ecommerce/api/cart/**
       globalcors:
         corsConfigurations:
           '[/**]':

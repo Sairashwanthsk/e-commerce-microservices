@@ -1,0 +1,30 @@
+### Base URL
+@baseUrl = http://localhost:8080/ecommerce/api/cart
+
+@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NzQ3MTExMSwiZXhwIjoxNzc3NTA3MTExfQ.lPzfP0x3c9N0a3XhEsHak4EOSkJj6VbnLPzSmjIkX08
+
+### Add item to cart
+POST {{baseUrl}}
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "userId": 1,
+    "productId": 1,
+    "quantity": 2
+}
+
+
+### Get cart items for a user
+GET {{baseUrl}}/1
+Authorization: Bearer {{token}}
+
+
+### Remove item from cart
+DELETE {{baseUrl}}/1/1
+Authorization: Bearer {{token}}
+
+
+### Remove item from cart
+DELETE {{baseUrl}}/1
+Authorization: Bearer {{token}}

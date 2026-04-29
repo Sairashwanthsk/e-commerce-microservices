@@ -45,6 +45,17 @@ services:
     #   - DB_USERNAME=postgres
     #   - DB_PASSWORD=postgres
 
+  cartservice:
+    build: ./cartservice
+    ports:
+      - "8084:8084"
+    depends_on:
+      - postgres
+    # environment:
+    #   - DB_URL=jdbc:postgresql://postgres:5432/orders_db
+    #   - DB_USERNAME=postgres
+    #   - DB_PASSWORD=postgres
+
   apigateway:
     build: ./apigateway
     ports:
@@ -53,3 +64,4 @@ services:
       - userservice
       - productservice
       - orderservice
+      - cartservice
