@@ -2,6 +2,8 @@ package com.ecommerce.cartservice.service;
 
 import java.util.List;
 import com.ecommerce.cartservice.dto.AddToCartRequest;
+import com.ecommerce.cartservice.dto.CartResponseDto;
+
 import lombok.RequiredArgsConstructor;
 import com.ecommerce.cartservice.entity.CartItem;
 
@@ -9,6 +11,8 @@ public interface CartService {
     CartItem addToCart(AddToCartRequest request);
 
     List<CartItem> getCart(String userId);
+
+    List<CartResponseDto> getDetailedCart(String userId);
 
     CartItem updateCartItem(String userId, Long productId, int quantity);
 

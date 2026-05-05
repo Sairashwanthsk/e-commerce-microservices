@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import lombok.RequiredArgsConstructor;
 import java.util.List;
 import com.ecommerce.cartservice.dto.AddToCartRequest;
+import com.ecommerce.cartservice.dto.CartResponseDto;
 import com.ecommerce.cartservice.dto.UpdateCartRequest;
 import com.ecommerce.cartservice.entity.CartItem;
 import com.ecommerce.cartservice.service.CartService;
@@ -33,27 +34,33 @@ public class CartController {
         return cartService.addToCart(request); // Return the added cart item (for demonstration)
     }
 
+    // @GetMapping("/{userId}")
+    // public List<CartItem> getCart(@PathVariable String userId) {
+    //     // Logic to retrieve cart items for the specified user
+    //     return cartService.getCart(userId); // Return cart items for the user
+    // }
+
     @GetMapping("/{userId}")
-    public List<CartItem> getCart(@PathVariable String userId) {
+    public List<CartResponseDto> getDetailedCart(@RequestHeader("X-User-Id") String userId) {
         // Logic to retrieve cart items for the specified user
-        return cartService.getCart(userId); // Return cart items for the user
+        return cartService.getDetailedCart(userId); // Return cart items for the user
     }
 
     @PutMapping("/{userId}/{productId}")
-    public CartItem updateCartItem(@PathVariable String userId, @PathVariable Long productId, @RequestBody UpdateCartRequest request) {
+    public CartItem updateCartItem(@RequestHeader("X-User-Id") String userId, @PathVariable Long productId, @RequestBody UpdateCartRequest request) {
         // Logic to update cart item
         return cartService.updateCartItem(userId, productId, request.getQuantity()); // Return the updated cart item (for demonstration)
     }
 
     @DeleteMapping("/{userId}/{productId}")
-    public ResponseEntity<Void> removeCartItem(@PathVariable String userId, @PathVariable Long productId) {
+    public ResponseEntity<Void> removeCartItem(@RequestHeader("X-User-Id") String userId, @PathVariable Long productId) {
         // Logic to remove item from cart
         cartService.removeCartItem(userId, productId);
         return ResponseEntity.noContent().build(); // Return 204 No Content
     }
 
     @DeleteMapping("/{userId}")
-    public ResponseEntity<Void> clearCart(@PathVariable String userId) {
+    public ResponseEntity<Void> clearCart(@RequestHeader("X-User-Id") String userId) {
         // Logic to clear the cart for the specified user
         cartService.clearCart(userId);
         return ResponseEntity.noContent().build(); // Return 204 No Content

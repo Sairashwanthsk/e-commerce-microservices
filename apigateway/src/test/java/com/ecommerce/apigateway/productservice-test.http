@@ -1,7 +1,7 @@
 ### Base URL
 @baseUrl = http://localhost:8080/ecommerce/api/products
 
-@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NzQ2ODAwOSwiZXhwIjoxNzc3NTA0MDA5fQ.dlqcSqVNzxcyiiKC0CqUl_jK3i0MWTw226F6XfOgDS8
+@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJ0ZXN0dXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlhdCI6MTc3NzU2MDYwOSwiZXhwIjoxNzc3NTk2NjA5fQ.pb3Lg9hhnkexmOcdLICDEuenxZlpCD3SQMbaRADvlJ8
 
 
 ### Create new product
