@@ -1,12 +1,10 @@
-/workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/security/util/JwtUtil.java
 /workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/entity/Product.java
 /workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/service/ProductService.java
+/workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/dto/ProductDto.java
 /workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/exception/ResourceNotFoundException.java
 /workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/exception/GlobalExceptionHandler.java
-/workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/security/config/SecurityConfig.java
 /workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/controller/ProductController.java
 /workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/dto/ProductRequest.java
 /workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/ProductserviceApplication.java
 /workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/repository/ProductRepository.java
 /workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/dto/ErrorResponse.java
-/workspaces/e-commerce-microservices/productservice/src/main/java/com/ecommerce/productservice/security/util/JwtFilter.java

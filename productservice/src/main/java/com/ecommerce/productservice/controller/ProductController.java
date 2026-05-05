@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ecommerce.productservice.dto.ProductRequest;
 import com.ecommerce.productservice.entity.Product;
 import com.ecommerce.productservice.service.ProductService;
+import com.ecommerce.productservice.dto.ProductDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -38,4 +39,8 @@ public class ProductController {
         return ResponseEntity.ok(productService.getProductById(id));
     }
 
+    @PostMapping("/batch")
+    public ResponseEntity<List<ProductDto>> getProductsByIds(@RequestBody List<Long> ids) {
+        return ResponseEntity.ok(productService.getProductsByIds(ids));
+    }
 }

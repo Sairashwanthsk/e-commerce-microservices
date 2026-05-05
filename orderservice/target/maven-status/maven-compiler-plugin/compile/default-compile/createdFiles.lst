@@ -1,7 +1,6 @@
 com/ecommerce/orderservice/dto/ErrorResponse.class
 com/ecommerce/orderservice/entity/Order.class
 com/ecommerce/orderservice/dto/OrderRequest.class
-com/ecommerce/orderservice/security/util/JwtFilter.class
 com/ecommerce/orderservice/repository/OrderRepository.class
 com/ecommerce/orderservice/exception/GlobalExceptionHandler.class
 com/ecommerce/orderservice/service/OrderService.class
@@ -9,7 +8,5 @@ com/ecommerce/orderservice/controller/OrderController.class
 com/ecommerce/orderservice/dto/Product.class
 com/ecommerce/orderservice/config/AppConfig.class
 com/ecommerce/orderservice/exception/ResourceNotFoundException.class
-com/ecommerce/orderservice/security/util/JwtUtil.class
 com/ecommerce/orderservice/dto/OrderResponse.class
 com/ecommerce/orderservice/OrderserviceApplication.class
-com/ecommerce/orderservice/security/config/SecurityConfig.class

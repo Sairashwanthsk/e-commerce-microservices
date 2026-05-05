@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.ecommerce.productservice.dto.ProductDto;
 import com.ecommerce.productservice.dto.ProductRequest;
 import com.ecommerce.productservice.entity.Product;
 import com.ecommerce.productservice.exception.ResourceNotFoundException;
@@ -35,5 +36,21 @@ public class ProductService {
     public Product getProductById(Long id) {
         return productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
+    }
+
+    public List<ProductDto> getProductsByIds(List<Long> ids) {
+        List<Product> products = productRepository.findAllById(ids);
+        if (products.size() != ids.size()) {
+            throw new ResourceNotFoundException("One or more products not found");
+        }
+        return products.stream().map(p -> {
+            ProductDto product = new ProductDto();
+            product.setId(p.getId());
+            product.setName(p.getName());
+            product.setDescription(p.getDescription());
+            product.setPrice(p.getPrice());
+            return product;
+        }).toList();
+
     }
 }
